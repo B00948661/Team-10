@@ -8,5 +8,6 @@ namespace Team_10
 {
     internal class Product
     {
+
     }
 }

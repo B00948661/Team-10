@@ -1,12 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Team_10
+﻿namespace Team10
 {
-    internal class Order
+    public class Order
     {
+        public int OrderId { get; set; }
+        public User User { get; set; }
+        public List<Product> Products { get; set; }
+
+        public Order(int orderId, User user, List<Product> products)
+        {
+            OrderId = orderId;
+            User = user;
+            Products = products;
+        }
+
+        public void DisplayOrderDetails()
+        {
+            Console.WriteLine($"Order ID: {OrderId}");
+            Console.WriteLine($"Customer: {User.UserName}");
+            Console.WriteLine("Products in your order:");
+            foreach (var product in Products)
+            {
+                Console.WriteLine($"{product.ProductName} - {product.Price:C}");
+            }
+        }
     }
 }

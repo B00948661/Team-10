@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Team_10
+﻿namespace Team10
 {
-    internal class Category
+    public class Category
     {
+        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
+        public string Description { get; set; }
+
+        public Category(int categoryId, string categoryName, string description)
+        {
+            CategoryId = categoryId;
+            CategoryName = categoryName;
+            Description = description;
+        }
     }
 }

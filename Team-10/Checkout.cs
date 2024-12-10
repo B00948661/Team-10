@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Team_10
+﻿namespace Team10
 {
-    internal class Checkout
+    public class Checkout
     {
+        public Order ProcessCheckout(User user, List<Product> productsInBasket)
+        {
+            if (productsInBasket.Count == 0)
+            {
+                Console.WriteLine("Your basket is empty.");
+                return null;
+            }
+
+            // Add logic for processing the checkout
+            Console.WriteLine("Processing checkout...");
+            return new Order(1, user, productsInBasket);  // Example: Creating an order
+        }
     }
 }

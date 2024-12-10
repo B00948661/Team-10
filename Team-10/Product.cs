@@ -1,13 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Team_10
+﻿namespace Team10
 {
-    internal class Product
+    public class Product
     {
+        public int ProductId { get; set; }
+        public string ProductName { get; set; }
+        public string ProductDescription { get; set; }
+        public decimal Price { get; set; }
+        public int StockQuantity { get; set; }
+        public int CategoryId { get; set; }
 
+        public Product(int productId, string productName, string productDescription, decimal price, int stockQuantity, int categoryId)
+        {
+            ProductId = productId;
+            ProductName = productName;
+            ProductDescription = productDescription;
+            Price = price;
+            StockQuantity = stockQuantity;
+            CategoryId = categoryId;
+        }
     }
 }

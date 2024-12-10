@@ -1,12 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Team_10
+﻿namespace Team10
 {
-    internal class Basket
+    public class Basket
     {
+        private List<Product> productsInBasket = new List<Product>();
+
+        public void AddProduct(Product product)
+        {
+            productsInBasket.Add(product);
+        }
+
+        public void ClearBasket()
+        {
+            productsInBasket.Clear();
+        }
+
+        public List<Product> GetProductsInBasket()
+        {
+            return productsInBasket;
+        }
+
+        public void DisplayBasket()
+        {
+            foreach (var product in productsInBasket)
+            {
+                Console.WriteLine($"{product.ProductName} - {product.Price:C} - Quantity: {product.StockQuantity}");
+            }
+        }
     }
 }
